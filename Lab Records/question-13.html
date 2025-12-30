@@ -1,0 +1,33 @@
+<!--Write a JavaScript program to construct the following pattern, using a nested for loop.
+ 
+*  
+* *  
+* * *  
+* * * *  
+* * * * *  
+Perform all programs using function
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Star Pattern</title>
+</head>
+<body>
+
+<script>
+    function printPattern(rows) {
+        for (var i = 1; i <= rows; i++) {
+            var line = "";
+            for (var j = 1; j <= i; j++) {
+                line += "* ";
+            }
+            document.write(line + "<br>");
+        }
+    }
+
+    printPattern(5);
+</script>
+
+</body>
+</html>

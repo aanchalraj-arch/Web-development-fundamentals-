@@ -1,0 +1,28 @@
+<!--Write a JavaScript program to find the Armstrong numbers of 3 digits.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3-Digit Armstrong Numbers</title>
+</head>
+<body>
+
+<script>
+    document.write("3-digit Armstrong numbers:<br>");
+
+    for (var num = 100; num <= 999; num++) {
+        var strNum = num.toString();
+        var sum = 0;
+
+        for (var i = 0; i < strNum.length; i++) {
+            sum += Math.pow(parseInt(strNum[i]), 3);
+        }
+
+        if (sum === num) {
+            document.write(num + "<br>");
+        }
+    }
+</script>
+
+</body>
+</html>

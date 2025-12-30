@@ -1,0 +1,43 @@
+<!--JavaScript Program to Check Whether a Number is a Duck Number-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Duck Number Checker</title>
+</head>
+<body>
+
+<script>
+    var num = parseInt(prompt("Enter a positive number:"));
+    var temp = num;
+    var isDuck = false;
+
+    
+    var firstDigit = temp;
+    while (firstDigit >= 10) {
+        firstDigit = (firstDigit - (firstDigit % 10)) / 10;
+    }
+
+    if (firstDigit === 0) {
+        isDuck = false;
+    } else {
+       
+        while (temp > 0) {
+            var digit = temp % 10; 
+            if (digit === 0) {
+                isDuck = true;
+                break;
+            }
+            temp = (temp - digit) / 10; 
+        }
+    }
+
+    if (isDuck) {
+        document.write(num + " is a Duck Number.");
+    } else {
+        document.write(num + " is not a Duck Number.");
+    }
+</script>
+
+</body>
+</html>

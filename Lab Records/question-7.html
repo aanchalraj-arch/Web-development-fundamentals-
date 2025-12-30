@@ -1,0 +1,35 @@
+<!--write a program that calculates the Body Mass Index (BMI) and categorizes it. The formula for BMI is: weight / (height * height).
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+</head>
+<body>
+
+<script>
+    function calculateBMI(weight, height) {
+        var bmi = weight / (height * height);
+
+        document.write("Your BMI is: " + bmi.toFixed(2) + "<br>");
+
+        if (bmi < 18.5) {
+            document.write("Category: Underweight");
+        } else if (bmi < 25) {
+            document.write("Category: Normal weight");
+        } else if (bmi < 30) {
+            document.write("Category: Overweight");
+        } else {
+            document.write("Category: Obese");
+        }
+    }
+
+    var weight = prompt("Enter your weight in kg:");
+    var height = prompt("Enter your height in meters:");
+
+    calculateBMI(weight, height);
+</script>
+
+</body>
+</html>

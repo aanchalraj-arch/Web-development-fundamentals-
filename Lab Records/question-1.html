@@ -1,0 +1,32 @@
+<!--Write a program that takes a number as input and prints whether it is even or odd. -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Even or Odd</title>
+</head>
+<body>
+
+<h2>Even or Odd Checker</h2>
+
+<input type="number" id="num">
+<button onclick="check()">Check</button>
+
+<p id="result"></p>
+
+<script>
+    function check() {
+        var n = document.getElementById("num").value;
+
+        if (n % 2 == 0) {
+            document.getElementById("result").innerHTML = "Even";
+        } else {
+            document.getElementById("result").innerHTML = "Odd";
+        }
+    }
+</script>
+
+</body>
+</html>

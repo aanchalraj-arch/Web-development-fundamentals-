@@ -1,0 +1,44 @@
+<!--: Use a switch statement to print the name of the day based on a number (1 for Monday, 2 for Tuesday, etc.). -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day Name</title>
+</head>
+<body>
+
+<script>
+    var day = prompt("Enter a number (1-7):");
+    var dayName;
+
+    switch (day) {
+        case "1":
+            dayName = "Monday";
+            break;
+        case "2":
+            dayName = "Tuesday";
+            break;
+        case "3":
+            dayName = "Wednesday";
+            break;
+        case "4":
+            dayName = "Thursday";
+            break;
+        case "5":
+            dayName = "Friday";
+            break;
+        case "6":
+            dayName = "Saturday";
+            break;
+        case "7":
+            dayName = "Sunday";
+            break;
+        default:
+            dayName = "Invalid number";
+    }
+
+    document.write("Day: " + dayName);
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+<!--JavaScript Program to Print the Fibonacci Sequence-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Sequence</title>
+</head>
+<body>
+
+<script>
+    function fibonacciSeries(n) {
+        var a = 0, b = 1;
+
+        if (n >= 1) document.write(a + "<br>");
+        if (n >= 2) document.write(b + "<br>");
+
+        for (var i = 3; i <= n; i++) {
+            var next = a + b;
+            document.write(next + "<br>");
+            a = b;
+            b = next;
+        }
+    }
+
+    var terms = parseInt(prompt("Enter the number of terms:"));
+    document.write("Fibonacci Series up to " + terms + " terms:<br>");
+    fibonacciSeries(terms);
+</script>
+
+</body>
+</html>

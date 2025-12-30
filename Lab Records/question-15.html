@@ -1,0 +1,32 @@
+<!--Write a JavaScript program to find the closest value to 100 from two numerical values.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Closest to 100</title>
+</head>
+<body>
+
+<script>
+    var num1 = parseFloat(prompt("Enter the first number:"));
+    var num2 = parseFloat(prompt("Enter the second number:"));
+
+    // Calculate differences manually
+    var diff1 = (100 - num1 >= 0) ? 100 - num1 : num1 - 100;
+    var diff2 = (100 - num2 >= 0) ? 100 - num2 : num2 - 100;
+
+    var closest;
+
+    if (diff1 < diff2) {
+        closest = num1;
+    } else if (diff2 < diff1) {
+        closest = num2;
+    } else {
+        closest = "Both numbers are equally close";
+    }
+
+    document.write("The number closest to 100 is: " + closest);
+</script>
+
+</body>
+</html>

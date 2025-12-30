@@ -1,0 +1,47 @@
+<!--Write a program that converts a numerical grade (0-100) to a letter grade (A, B, C, D, F) using if/else if/else -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Converter</title>
+</head>
+<body>
+
+<h2>Grade Converter</h2>
+
+<input type="number" id="grade" placeholder="Enter grade (0-100)" onchange="convertGrade()">
+
+<p id="result"></p>
+
+<script>
+    function convertGrade() {
+        var marks = document.getElementById("grade").value;
+        var result = document.getElementById("result");
+        var grade;
+
+        switch (true) {
+            case (marks >= 90 && marks <= 100):
+                grade = "A";
+                break;
+            case (marks >= 80):
+                grade = "B";
+                break;
+            case (marks >= 70):
+                grade = "C";
+                break;
+            case (marks >= 60):
+                grade = "D";
+                break;
+            case (marks >= 0):
+                grade = "F";
+                break;
+            default:
+                grade = "Invalid grade";
+        }
+
+        result.textContent = "Grade: " + grade;
+    }
+</script>
+
+</body>
+</html>

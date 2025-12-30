@@ -1,0 +1,42 @@
+<!--Write a JavaScript conditional statement to sort three numbers. Display an alert box to show the results.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort Three Numbers</title>
+</head>
+<body>
+
+<script>
+    var a = parseInt(prompt("Enter first number:"));
+    var b = parseInt(prompt("Enter second number:"));
+    var c = parseInt(prompt("Enter third number:"));
+
+    var result;
+
+    if (a <= b && a <= c) {
+        if (b <= c) {
+            result = a + ", " + b + ", " + c;
+        } else {
+            result = a + ", " + c + ", " + b;
+        }
+    } else if (b <= a && b <= c) {
+        if (a <= c) {
+            result = b + ", " + a + ", " + c;
+        } else {
+            result = b + ", " + c + ", " + a;
+        }
+    } else {
+        if (a <= b) {
+            result = c + ", " + a + ", " + b;
+        } else {
+            result = c + ", " + b + ", " + a;
+        }
+    }
+
+    alert("Sorted numbers (Ascending order): " + result);
+</script>
+
+</body>
+</html>
+

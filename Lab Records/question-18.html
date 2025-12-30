@@ -1,0 +1,30 @@
+<!--Program to check whether the given number is Buzz Number or not-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buzz Number Checker</title>
+</head>
+<body>
+
+<script>
+    function isBuzzNumber(num) {
+       
+        if (num % 7 === 0 || num % 10 === 7) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    var number = parseInt(prompt("Enter a number:"));
+
+    if (isBuzzNumber(number)) {
+        document.write(number + " is a Buzz Number.");
+    } else {
+        document.write(number + " is not a Buzz Number.");
+    }
+</script>
+
+</body>
+</html>
